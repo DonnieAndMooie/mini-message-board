@@ -1,0 +1,1 @@
+The aim of this project is to create a basic messaage board using Express and EJS for templating.
