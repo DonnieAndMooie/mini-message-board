@@ -23,7 +23,7 @@ body {
 }
 
 h1{
-  font-family: "Konkhmer";
+  font-family: "Konkhmer", sans-serif;
   font-size: 38px;
 }
 
@@ -40,7 +40,7 @@ form{
   padding: 10px;
   margin-bottom: 18px;
   border-radius: 10px;
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-size: 24px;
 }
 
@@ -48,7 +48,7 @@ form{
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 18px;
 }
 
@@ -63,7 +63,7 @@ button{
   background-color: green;
   padding: 18px 8px;
   color: white;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   border-radius: 20px;
   cursor: pointer;
@@ -80,7 +80,7 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 
 label{
@@ -95,11 +95,17 @@ label{
 input{
   height: 28px;
   font-size: 20px;
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
 }
 
 textarea{
   font-size: 20px;
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   width: 60%;
+}
+
+.error{
+  font-size: 32px;
+  color: red;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
 }

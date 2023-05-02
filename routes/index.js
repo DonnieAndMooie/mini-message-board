@@ -29,4 +29,8 @@ router.post("/new", function(req, res, next){
   res.redirect("/")
 })
 
+router.use(function(req, res, next){
+  res.render(error)
+})
+
 module.exports = router;
