@@ -1,5 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+require('dotenv').config()
+const Message = require("../models/message")
+
 
 const messages = [
   {
@@ -14,6 +17,15 @@ const messages = [
   }
 ]
 
+async function fetchMessages(){
+  const fetchedMessages = await Message.find()
+  for (const message of fetchedMessages){
+    messages.push(message)
+  }
+}
+
+fetchMessages()
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Mini Messageboard', messages: messages });
@@ -23,9 +35,13 @@ router.get("/new", function(req, res, next){
   res.render("form")
 })
 
-router.post("/new", function(req, res, next){
+router.post("/new", async function(req, res, next){
   const {name, message } = req.body
-  messages.push({text: message, user: name, added: new Date()})
+  const newMessage = new Message(
+    {text: message, user: name, added: new Date()}
+  )
+  await newMessage.save()
+  messages.push(newMessage)
   res.redirect("/")
 })
 
