@@ -1,8 +1,52 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: "Konkhmer";
+  src: url("../fonts/KonkhmerSleokchher-Regular.ttf");
 }
 
-a {
-  color: #00B7FF;
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/Outfit-VariableFont_wght.ttf");
+}
+
+body {
+  padding: 50px;
+  background-color: rgb(176, 225, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  font-family: "Konkhmer";
+  font-size: 38px;
+}
+
+.messages{
+  background-color: rgb(172, 171, 171);
+  padding: 20px;
+  border-radius: 20px;
+  width: 60vw;
+}
+
+.message{
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  font-family: "Outfit";
+  font-size: 24px;
+}
+
+.message-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-family: "Lato";
+  font-size: 18px;
 }
