@@ -3,7 +3,6 @@ const router = express.Router();
 require('dotenv').config()
 const Message = require("../models/message")
 
-
 const messages = [
   {
     text: "Hi there!",
